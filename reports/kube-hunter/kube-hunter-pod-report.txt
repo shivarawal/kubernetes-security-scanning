@@ -1,0 +1,6 @@
+2026-06-13 04:49:38,068 INFO kube_hunter.modules.report.collector Started hunting
+2026-06-13 04:49:38,068 INFO kube_hunter.modules.report.collector Discovering Open Kubernetes Services
+2026-06-13 04:49:38,074 INFO kube_hunter.modules.report.collector Found vulnerability "CAP_NET_RAW Enabled" in Local to Pod (kube-hunter)
+2026-06-13 04:49:38,077 INFO kube_hunter.modules.report.collector Found vulnerability "Read access to pod's service account token" in Local to Pod (kube-hunter)
+2026-06-13 04:49:38,077 INFO kube_hunter.modules.report.collector Found vulnerability "Access to pod's secrets" in Local to Pod (kube-hunter)
+2026-06-13 04:51:49,556 WARNING urllib3.connectionpool Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f672a1c02b0>: Failed to establish a new connection: [Errno 110] Operation timed out')': /api/v1/nodes?watch=False
