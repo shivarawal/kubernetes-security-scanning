@@ -1,0 +1,46 @@
+
+Nodes
++-------------+---------------+
+| TYPE        | LOCATION      |
++-------------+---------------+
+| Node/Master | 192.168.56.10 |
++-------------+---------------+
+
+Detected Services
++-------------+---------------------+----------------------+
+| SERVICE     | LOCATION            | DESCRIPTION          |
++-------------+---------------------+----------------------+
+| Kubelet API | 192.168.56.10:10250 | The Kubelet is the   |
+|             |                     | main component in    |
+|             |                     | every Node, all pod  |
+|             |                     | operations goes      |
+|             |                     | through the kubelet  |
++-------------+---------------------+----------------------+
+| Etcd        | 192.168.56.10:2379  | Etcd is a DB that    |
+|             |                     | stores cluster's     |
+|             |                     | data, it contains    |
+|             |                     | configuration and    |
+|             |                     | current              |
+|             |                     |     state            |
+|             |                     | information, and     |
+|             |                     | might contain        |
+|             |                     | secrets              |
++-------------+---------------------+----------------------+
+| API Server  | 192.168.56.10:6443  | The API server is in |
+|             |                     | charge of all        |
+|             |                     | operations on the    |
+|             |                     | cluster.             |
++-------------+---------------------+----------------------+
+
+Vulnerabilities
+For further information about a vulnerability, search its ID in: 
+https://avd.aquasec.com/
++--------+--------------------+----------------------+----------------------+----------------------+----------+
+| ID     | LOCATION           | MITRE CATEGORY       | VULNERABILITY        | DESCRIPTION          | EVIDENCE |
++--------+--------------------+----------------------+----------------------+----------------------+----------+
+| KHV002 | 192.168.56.10:6443 | Initial Access //    | K8s Version          | The kubernetes       | v1.29.15 |
+|        |                    | Exposed sensitive    | Disclosure           | version could be     |          |
+|        |                    | interfaces           |                      | obtained from the    |          |
+|        |                    |                      |                      | /version endpoint    |          |
++--------+--------------------+----------------------+----------------------+----------------------+----------+
+
